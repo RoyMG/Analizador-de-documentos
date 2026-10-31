@@ -1,0 +1,272 @@
+.result {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.verdict {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+
+  h2 {
+    margin: 2px 0 4px;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &.seguro {
+    background: var(--ok-bg);
+    color: var(--ok);
+  }
+
+  &.precaucion {
+    background: var(--warn-bg);
+    color: var(--warn);
+  }
+
+  &.riesgo {
+    background: var(--risk-bg);
+    color: var(--risk);
+  }
+}
+
+.docType {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.mode {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.notice {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  color: var(--muted);
+}
+
+.card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  h3 {
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+  }
+
+  > p {
+    margin: 0;
+  }
+}
+
+.flags,
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flags {
+  display: grid;
+  gap: 14px;
+}
+
+.flag {
+  padding-left: 14px;
+  border-left: 4px solid var(--accent);
+
+  p {
+    margin: 4px 0 8px;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--muted);
+    background: var(--bg);
+    border-radius: 8px;
+  }
+}
+
+.flagHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.sev_alta {
+  background: var(--risk-bg);
+  color: var(--risk);
+}
+
+.sev_media {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+
+.sev_baja {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.flagFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 0.82rem;
+}
+
+.verified {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.unverified {
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list {
+  li {
+    position: relative;
+    padding: 6px 0 6px 20px;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 8px 6px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+
+  th {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  small {
+    display: block;
+    color: var(--muted);
+  }
+}
+
+.amount {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.dates {
+  margin: 0;
+}
+
+.dateRow {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  dt {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  dd {
+    margin: 2px 0 0;
+    font-weight: 600;
+  }
+}
+
+.dateContext {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--muted);
+
+  mark {
+    padding: 0 3px;
+    border-radius: 3px;
+    color: inherit;
+    background: var(--mark);
+  }
+}
+
+@media (max-width: 560px) {
+  .verdict {
+    flex-direction: column;
+  }
+}

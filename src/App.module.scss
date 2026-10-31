@@ -1,0 +1,144 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+.header {
+  margin-bottom: 24px;
+
+  h1 {
+    margin: 4px 0 8px;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    letter-spacing: -0.02em;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.panel {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.samples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.chip {
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  line-height: 1.5;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.over {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.upload {
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.primary {
+  padding: 11px 22px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--accent);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+}
+
+.error {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--risk);
+  background: var(--risk-bg);
+}

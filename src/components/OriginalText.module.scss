@@ -1,0 +1,22 @@
+.text {
+  margin: 0;
+  padding: 16px;
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.mark {
+  background: var(--mark);
+  color: inherit;
+  padding: 1px 2px;
+  border-radius: 3px;
+  scroll-margin-top: 80px;
+}
