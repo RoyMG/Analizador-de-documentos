@@ -142,3 +142,21 @@
   color: var(--risk);
   background: var(--risk-bg);
 }
+
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+
+  p {
+    margin: 2px 0;
+  }
+
+  strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+}

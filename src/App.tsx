@@ -14,6 +14,9 @@ export function App() {
   const [error, setError] = useState<string | null>(null);
   const [aiActive, setAiActive] = useState<boolean | null>(null);
 
+  const AUTHOR = 'Rodrigo Manrique Gtz';
+  const COPYRIGHT_YEAR = 2026;
+
   useEffect(() => {
     let cancelled = false;
     getHealth().then((health) => {
@@ -144,6 +147,14 @@ export function App() {
       </section>
 
       {result && <ResultView analysis={result} text={analyzedText} />}
+            <footer className={styles.footer}>
+        <p>
+          © {COPYRIGHT_YEAR} {AUTHOR}
+        </p>
+        <p>
+          Desarrollado con la asistencia de <strong>Claude</strong>, de Anthropic.
+        </p>
+      </footer>
     </main>
   );
 }
